@@ -8,6 +8,8 @@ client = commands.Bot(command_prefix="/", self_bot=True)
 def kiz():
     print("This script was made by @kiz.")
     print("It can't be edited or shared without permission.")
+    print("\033[91mIgnore popups in the terminal the script will continue as normal after.\033[0m")
+
     print("\nType 'I agree' to continue.")
 
 def terms():
@@ -19,8 +21,8 @@ def get_serverid():
     target_serv_id = input("Enter the server ID to send to (the server u want to send to): ")
     return int(original_serv_id), int(target_serv_id)
 
-def get_token():
-    return input("Enter your token: ")
+def tokenbleh():
+    return input("Enter token:")
 
 @client.event
 async def on_ready():
@@ -78,4 +80,4 @@ async def replicate(source_channel, target_channel, target_guild):
     await target_channel.edit(overwrites=new_overwrites)
 kiz()
 terms()
-client.run(get_token())
+client.run(tokenbleh())
